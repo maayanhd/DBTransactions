@@ -111,6 +111,7 @@ class Graph:
         if not is_there_a_topological_sort(vertex_indegree_arr):
             print("NO")
         else:
+
             print_sorted_transactions(topological_sorted_list)
 
 
@@ -124,7 +125,7 @@ def is_there_a_topological_sort(vertex_indegree_arr):
 
 def print_sorted_transactions(topological_sorted_list):
     output_str = ""
-    for vert in range(1, len(topological_sorted_list) + 1):
+    for vert in topological_sorted_list:
         output_str += "T" + str(vert) + "->"
     ''' Removing redundant arrow'''
     print(output_str[:-2])
