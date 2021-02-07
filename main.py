@@ -8,11 +8,6 @@ def test_transaction_timing():
     operation_list = operations_vertexes_tuple[0]
     vertex_list = operations_vertexes_tuple[1]
 
-    '''Debugging'''
-    print(operation_list)
-    print(vertex_list)
-    '''Debugging'''
-
     transactions_graph = build_graph_by_conflicts(vertex_list, operation_list)
     '''Prints'''
     transactions_graph.topological_sort()
@@ -79,10 +74,7 @@ class Graph:
         vertex_indegree_arr = [0] * (self.vert_num + 1)
         source_queue = []
 
-        for i in range(1, self.vert_num + 1):
-            for j in range(1, self.vert_num + 1):
-                print(f"{self.graph[i][j]} ", end="")
-            print("")
+
 
         for i in range(1, self.vert_num + 1):
             for j in range(1, self.vert_num + 1):
